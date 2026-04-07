@@ -288,7 +288,7 @@ st.sidebar.markdown(
 if page == "Home":
     st.title("Predicting Student Academic Performance")
     st.markdown(
-        "<p class='page-subtitle'>Using Demographic, Behavioural, and Socio-Educational Factors — UCI Student Performance Dataset (Cortez, 2008)</p>",
+        "<p class='page-subtitle'>Using Demographic, Behavioural, and Socio-Educational Factors</p>",
         unsafe_allow_html=True
     )
     st.markdown("---")
