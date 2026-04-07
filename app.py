@@ -203,23 +203,7 @@ st.markdown("""
         font-size: 15.5px; color: #6a7e95; margin-top: -6px;
         margin-bottom: 4px; font-style: italic; font-family: 'DM Sans', sans-serif;
     }
-    
-    [data-testid="stToolbar"] {
-        display: none !important;
-    }
-    
-    [data-testid="stDecoration"] {
-        display: none !important;
-    }
-    
-    header {
-        visibility: hidden;
-    }
 
-    button[title="View fullscreen"],
-    button[title="Open settings"] {
-        display: none !important;
-    }
 </style>
 """, unsafe_allow_html=True)
 
