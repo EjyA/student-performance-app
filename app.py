@@ -19,12 +19,14 @@ st.markdown("""
     [data-testid="stSidebar"] .stRadio label { color: #e8edf2 !important; font-size: 15px; }
     .main { background-color: #f4f7fb; }
     [data-testid="stMetric"] {
-        background-color: #ffffff;
-        border: 1px solid #dce3ed;
-        border-radius: 10px;
-        padding: 18px 20px;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 20px;
+        border: 1px solid #e4ebf3;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        transition: transform 0.15s ease;
     }
+
     [data-testid="stMetricLabel"] { font-size: 13px; color: #6b7a8d; }
     [data-testid="stMetricValue"] { font-size: 28px; font-weight: 700; color: #1a2e44; }
     h1 { color: #1a2e44; font-weight: 800; }
