@@ -204,19 +204,21 @@ st.markdown("""
         margin-bottom: 4px; font-style: italic; font-family: 'DM Sans', sans-serif;
     }
     
-    /* Hide Streamlit top toolbar (the keyboard shortcut popup comes from here) */
     [data-testid="stToolbar"] {
         display: none !important;
     }
     
-    /* Hide the little floating “?” help / keyboard shortcut trigger */
     [data-testid="stDecoration"] {
         display: none !important;
     }
     
-    /* Optional: remove any hover-triggered UI artifacts */
     header {
         visibility: hidden;
+    }
+
+    button[title="View fullscreen"],
+    button[title="Open settings"] {
+        display: none !important;
     }
 </style>
 """, unsafe_allow_html=True)
