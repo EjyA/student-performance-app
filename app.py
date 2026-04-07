@@ -204,6 +204,11 @@ st.markdown("""
         margin-bottom: 4px; font-style: italic; font-family: 'DM Sans', sans-serif;
     }
 
+    st.markdown("""
+    <style>
+    [data-testid="stIconMaterial"] {
+        display: none !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
