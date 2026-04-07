@@ -14,129 +14,45 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-
-    /* Overall page */
-    .main {
-        background: linear-gradient(to bottom right, #f6f8fc, #eef3f9);
-    }
-
-    /* Sidebar */
-    [data-testid="stSidebar"] {
-        background: linear-gradient(180deg, #1f3a5f, #162a44);
-    }
-
-    [data-testid="stSidebar"] * {
-        color: #f1f5f9 !important;
-    }
-
-    [data-testid="stSidebar"] .stRadio label {
-        font-size: 15px;
-        font-weight: 500;
-        opacity: 0.9;
-    }
-
-    /* Headings */
-    h1 {
-        color: #1f3a5f;
-        font-weight: 800;
-        letter-spacing: -0.5px;
-    }
-
-    h2, h3 {
-        color: #2f5d8a;
-        font-weight: 700;
-    }
-
-    /* Metric cards */
+    [data-testid="stSidebar"] { background-color: #1a2e44; }
+    [data-testid="stSidebar"] * { color: #e8edf2 !important; }
+    [data-testid="stSidebar"] .stRadio label { color: #e8edf2 !important; font-size: 15px; }
+    .main { background-color: #f4f7fb; }
     [data-testid="stMetric"] {
-        background: #ffffff;
-        border-radius: 14px;
-        padding: 20px;
-        border: 1px solid #e4ebf3;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        transition: transform 0.15s ease;
-    }
-
-    [data-testid="stMetric"]:hover {
-        transform: translateY(-2px);
-    }
-
-    [data-testid="stMetricLabel"] {
-        font-size: 13px;
-        color: #7b8da3;
-    }
-
-    [data-testid="stMetricValue"] {
-        font-size: 30px;
-        font-weight: 700;
-        color: #1f3a5f;
-    }
-
-    /* Tabs */
-    .stTabs [data-baseweb="tab-list"] {
-        gap: 8px;
-        border-bottom: 2px solid #e4ebf3;
-    }
-
-    .stTabs [data-baseweb="tab"] {
-        background-color: #edf2f7;
-        border-radius: 10px 10px 0 0;
-        padding: 10px 22px;
-        font-weight: 600;
-        color: #355c85;
-        transition: all 0.2s ease;
-    }
-
-    .stTabs [data-baseweb="tab"]:hover {
-        background-color: #e3ebf5;
-    }
-
-    .stTabs [aria-selected="true"] {
-        background: #355c85 !important;
-        color: white !important;
-    }
-
-    /* Alerts */
-    .stAlert {
+        background-color: #ffffff;
+        border: 1px solid #dce3ed;
         border-radius: 10px;
-        padding: 14px;
+        padding: 18px 20px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.06);
     }
-
-    /* Divider */
-    hr {
-        border: none;
-        border-top: 1px solid #e4ebf3;
-        margin: 28px 0;
+    [data-testid="stMetricLabel"] { font-size: 13px; color: #6b7a8d; }
+    [data-testid="stMetricValue"] { font-size: 28px; font-weight: 700; color: #1a2e44; }
+    h1 { color: #1a2e44; font-weight: 800; }
+    h2, h3 { color: #2c4a6e; font-weight: 700; }
+    .stAlert { border-radius: 8px; }
+    .stTabs [data-baseweb="tab-list"] { gap: 6px; border-bottom: 2px solid #dce3ed; }
+    .stTabs [data-baseweb="tab"] {
+        background-color: #eef2f7;
+        border-radius: 8px 8px 0 0;
+        padding: 8px 20px;
+        font-weight: 600;
+        color: #2c4a6e;
     }
-
-    /* Caption */
-    .caption-text {
-        font-size: 12px;
-        color: #8fa1b5;
-        font-style: italic;
-        margin-top: 6px;
-    }
-
-    /* Insight cards */
+    .stTabs [aria-selected="true"] { background-color: #2c4a6e !important; color: white !important; }
+    hr { border: none; border-top: 1px solid #dce3ed; margin: 24px 0; }
+    .caption-text { font-size: 12px; color: #8a97a8; font-style: italic; margin-top: 8px; }
     .stat-card {
         background: #ffffff;
-        border-left: 5px solid #355c85;
-        border-radius: 10px;
-        padding: 16px 18px;
-        margin-bottom: 14px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        font-size: 14.5px;
-        color: #1f3a5f;
+        border-left: 4px solid #2c4a6e;
+        border-radius: 6px;
+        padding: 14px 18px;
+        margin-bottom: 12px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        font-size: 14px;
+        color: #1a2e44;
     }
-
-    .stat-card-warn {
-        border-left-color: #e74c3c;
-    }
-
-    .stat-card-ok {
-        border-left-color: #27ae60;
-    }
-
+    .stat-card-warn { border-left-color: #c0392b; }
+    .stat-card-ok { border-left-color: #1e8449; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -183,11 +99,16 @@ st.sidebar.markdown(
 )
 
 
-# ─────────────────────────────────────────────
+
 # HOME
-# ─────────────────────────────────────────────
 if page == "Home":
     st.title("Predicting Student Academic Performance")
+    st.markdown(
+        "<p style='font-size:16px; color:#4a5a6e; margin-top:-10px;'>"
+        "Using Demographic, Behavioural, and Socio-Educational Factors"
+        "</p>",
+        unsafe_allow_html=True
+    )
     st.markdown("---")
 
     st.markdown("""
@@ -278,9 +199,7 @@ if page == "Home":
         st.plotly_chart(fig_higher, use_container_width=True)
 
 
-# ─────────────────────────────────────────────
 # DATASET EXPLORER
-# ─────────────────────────────────────────────
 elif page == "Dataset Explorer":
     st.title("Dataset Explorer")
     st.markdown(
