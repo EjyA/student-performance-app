@@ -203,9 +203,23 @@ st.markdown("""
         font-size: 15.5px; color: #6a7e95; margin-top: -6px;
         margin-bottom: 4px; font-style: italic; font-family: 'DM Sans', sans-serif;
     }
+    
+    /* Hide Streamlit top toolbar (the keyboard shortcut popup comes from here) */
+    [data-testid="stToolbar"] {
+        display: none !important;
+    }
+    
+    /* Hide the little floating “?” help / keyboard shortcut trigger */
+    [data-testid="stDecoration"] {
+        display: none !important;
+    }
+    
+    /* Optional: remove any hover-triggered UI artifacts */
+    header {
+        visibility: hidden;
+    }
 </style>
 """, unsafe_allow_html=True)
-
 
 @st.cache_data
 def load_data():
