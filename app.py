@@ -203,10 +203,6 @@ st.markdown("""
         font-size: 15.5px; color: #6a7e95; margin-top: -6px;
         margin-bottom: 4px; font-style: italic; font-family: 'DM Sans', sans-serif;
     }
-
-    [data-testid="stIconMaterial"] {
-        display: none !important;
-    }
 </style>
 """, unsafe_allow_html=True)
 
