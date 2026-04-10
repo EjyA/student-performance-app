@@ -282,9 +282,7 @@ st.sidebar.markdown(
 )
 
 
-# ─────────────────────────────────────────────
 # HOME
-# ─────────────────────────────────────────────
 if page == "Home":
     st.title("Predicting Student Academic Performance")
     st.markdown(
@@ -404,9 +402,7 @@ if page == "Home":
         st.plotly_chart(fig_higher, use_container_width=True)
 
 
-# ─────────────────────────────────────────────
 # DATASET EXPLORER
-# ─────────────────────────────────────────────
 elif page == "Dataset Explorer":
     st.title("Dataset Explorer")
     st.markdown(
@@ -502,9 +498,7 @@ elif page == "Dataset Explorer":
     st.plotly_chart(fig_status, use_container_width=True)
 
 
-# ─────────────────────────────────────────────
 # EDA VISUALISATIONS
-# ─────────────────────────────────────────────
 elif page == "EDA Visualisations":
     st.title("Exploratory Data Analysis")
     st.markdown(
@@ -796,9 +790,7 @@ elif page == "EDA Visualisations":
         )
 
 
-# ─────────────────────────────────────────────
 # MODEL PERFORMANCE
-# ─────────────────────────────────────────────
 elif page == "Model Performance":
     st.title("Model Performance Comparison")
     st.markdown(
@@ -1166,9 +1158,7 @@ elif page == "Model Performance":
             )
 
 
-# ─────────────────────────────────────────────
 # AT-RISK PREDICTOR
-# ─────────────────────────────────────────────
 elif page == "At-Risk Predictor":
     st.title("Early Warning: At-Risk Student Predictor")
     st.markdown(
