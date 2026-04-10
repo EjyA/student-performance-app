@@ -293,7 +293,7 @@ if page == "Home":
 
     st.markdown(
         "<p class='intro-text'>"
-        "This project explores what actually drives student outcomes — not just who scores well, "
+        "This project explores what actually drives student outcomes, not just who scores well, "
         "but <em>why</em>, and whether that can be predicted early enough to matter. "
         "Two machine learning strategies were developed: a full prediction model using all available data including prior grades, "
         "and an early warning model that works without any grade history, "
